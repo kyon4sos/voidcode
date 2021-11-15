@@ -1,3 +1,4 @@
+import { UserService } from './../user/user.service';
 import { JsonResult } from './../base/index';
 import { Body, Controller, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
@@ -6,11 +7,16 @@ import { LoginDto } from './dto';
 @ApiTags('登录')
 @Controller()
 export class AuthController {
+  constructor(private readonly userService: UserService) {}
   @ApiOperation({
     summary: '登录',
   })
   @Post('/login')
   async login(@Body() login: LoginDto): Promise<JsonResult> {
-    return JsonResult.err(40001, '请登录');
+    const user = await this.userService.login(login);
+    if (user) {
+      return JsonResult.ok(user);
+    }
+    return JsonResult.err(40001, '用户名密码错误');
   }
 }

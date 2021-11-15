@@ -18,4 +18,7 @@ export class User extends Model<User> {
 
   @Column({ defaultValue: true })
   isActive: boolean;
+
+  @Column({ defaultValue: false })
+  isLock: boolean;
 }
