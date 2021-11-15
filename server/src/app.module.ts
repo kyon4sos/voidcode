@@ -5,6 +5,8 @@ import { UserModule } from './user/user.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './user/user.model';
 import { AuthModule, passportModule } from './auth/auth.module';
+import { GlobalExceptionFilter } from './exception/global.excepition';
+import { APP_FILTER } from '@nestjs/core';
 
 @Module({
   imports: [
@@ -24,6 +26,12 @@ import { AuthModule, passportModule } from './auth/auth.module';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_FILTER,
+      useClass: GlobalExceptionFilter,
+    },
+  ],
 })
 export class AppModule {}
