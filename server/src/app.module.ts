@@ -23,6 +23,7 @@ import { APP_FILTER } from '@nestjs/core';
       models: [User],
       synchronize: true,
       autoLoadModels: true,
+      
     }),
   ],
   controllers: [AppController],
