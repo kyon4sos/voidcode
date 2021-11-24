@@ -1,0 +1,487 @@
+:root {
+  /* --primaryColorV2: #FFE256; */
+  /* --primaryColorV2 :#21c3a9; */
+  --primaryColor: #2fc2a9;
+  --primaryColorV2: #2fc2a9;
+  --primaryText: #050505;
+  --infoColor: #737373;
+  --borderColor: #ababab;
+  --hvrBgColor: #e4e4e4;
+  --colorGray: #ababab;
+  --colorGray3: #f3f3f3;
+  --dangerColor: #ff4747;
+}
+
+.danger {
+  background: var(--dangerColor);
+  color: #fff;
+}
+
+.text-primary {
+  color: var(--primaryColorV2);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.primary-color-v2 {
+  background: var(--primaryColorV2);
+}
+
+.primary-color-v2-light {
+  background: #2fc2a9;
+}
+
+.placeholder-color {
+  color: var(--infoColor);
+}
+
+.text-info-color {
+  color: var(--infoColor);
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+.text-color {
+  color: var(--primaryText);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-gray {
+  background: #f3f3f3;
+}
+
+.bg-gray-1 {
+  background: #edeaea;
+}
+
+.bg-gray-2 {
+  background: var(--colorGray);
+}
+
+.bg-gray-3 {
+  background: var(--colorGray3);
+}
+
+.color-gray-2 {
+  color: var(--colorGray);
+}
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-13 {
+  font-size: 13px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
+  font-weight: 700;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-68px {
+  width: 68px !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-50p {
+  height: 50px;
+}
+
+.line-h-50p {
+  line-height: 50px;
+}
+
+.p-0 {
+  padding: 0 0;
+}
+
+.p-2 {
+  padding: 2px 2px;
+}
+
+.p-4 {
+  padding: 4px 4px;
+}
+
+.p-6 {
+  padding: 6px 6px;
+}
+
+.p-8 {
+  padding: 8px 8px;
+}
+
+.p-12 {
+  padding: 12px 12px;
+}
+
+.p-22 {
+  padding: 22px 22px;
+}
+
+.p-v-8 {
+  padding: 8px 0;
+}
+
+.p-v-12 {
+  padding: 12px 0;
+}
+
+.p-v-16 {
+  padding: 16px 0;
+}
+
+.p-h-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.p-h-13 {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.p-h-14 {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 2px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-6 {
+  margin-bottom: 6px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.mr-6 {
+  margin-right: 6px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mr-28 {
+  margin-right: 28px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.ml-24 {
+  margin-left: 24px;
+}
+
+.inlnie-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.just-space-between {
+  justify-content: space-between;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.just-end {
+  justify-content: flex-end;
+}
+
+.base-radius {
+  border-radius: 6px;
+}
+
+.radius-50 {
+  border-radius: 50%;
+}
+
+.radius-0 {
+  border-radius: 0px !important;
+}
+
+.radius-4 {
+  border-radius: 4px;
+}
+
+.radius-8 {
+  border-radius: 8px;
+}
+
+.radius-16 {
+  border-radius: 16px;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.disable {
+  cursor: not-allowed !important;
+  background: #f5f5f5;
+}
+
+.border-none {
+  border: none;
+}
+
+.base-border {
+  border: 1px solid var(--borderColor);
+}
+
+.border {
+  border: 1px solid #e2dede;
+}
+
+.border-gray {
+  border: 1px solid var(--colorGray);
+}
+
+.border-dash {
+  border: 1px;
+  border-style: dashed;
+  border-color: var(--colorGray);
+}
+
+/* .border-dash {
+   border: 1px ;
+   border-style: dashed;
+   border-color: #e2dede;
+} */
+.border-top {
+  border-top: 1px solid #e2dede;
+}
+
+.border-left {
+  border-left: 1px solid #e2dede;
+}
+
+.border-right {
+  border-right: 1px solid #e2dede;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e2dede;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid #edeaea;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
+}
+
+.box-shadow-light {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 5%);
+}
+
+.outline {
+  outline: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.focus {
+  border: 1px solid transparent;
+}
+
+.focus:focus {
+  border: 1px solid var(--primaryColorV2) !important;
+}
+
+.hvr-color-white {
+  color: #fff;
+}
+
+.hvr-color:hover {
+  color: var(--primaryColorV2);
+  cursor: pointer;
+}
+
+.hvr-bg-color-priamry:hover {
+  background: var(--primaryColorV2);
+  cursor: pointer;
+}
+
+.hvr-bg-color:hover {
+  background: var(--hvrBgColor);
+  cursor: pointer;
+}
+
+.hvr-cursor {
+  cursor: pointer;
+}
+
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primaryColorV2);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+  color: white;
+}
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}

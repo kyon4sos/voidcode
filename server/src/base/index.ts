@@ -1,3 +1,7 @@
+import { Model } from 'sequelize-typescript';
+import { ForbiddenException, Injectable, Req } from '@nestjs/common';
+import { Request } from 'express';
+import { InjectModel, SequelizeModule } from '@nestjs/sequelize';
 export class JsonResult {
   code: number;
   msg: string;
@@ -13,4 +17,28 @@ export class JsonResult {
   static err(code: number, msg: string) {
     return new JsonResult(code, msg, null);
   }
+}
+
+export class BaseController {
+  ok(data: any) {
+    return JsonResult.ok(data);
+  }
+  err(code: number, msg: string) {
+    return JsonResult.err(code, msg);
+  }
+  getCurrentUser(@Req() req: Request) {
+    const user = req && req.user;
+    if (!user) {
+      throw new ForbiddenException();
+    }
+    return user;
+  }
+}
+
+export interface IService<T> {
+  getOne(id: string | number): T;
+  getAll(): T[];
+  create(T): number;
+  remove(id: string | number): boolean;
+  update(T): number;
 }
