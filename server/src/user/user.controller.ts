@@ -7,7 +7,6 @@ import { AuthGuard } from '@nestjs/passport';
 export class UserController extends BaseController {
   constructor() {
     super();
-    console.log('user', new Date());
   }
   @UseGuards(AuthGuard('jwt'))
   @Get()

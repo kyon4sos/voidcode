@@ -34,11 +34,3 @@ export class BaseController {
     return user;
   }
 }
-
-export interface IService<T> {
-  getOne(id: string | number): T;
-  getAll(): T[];
-  create(T): number;
-  remove(id: string | number): boolean;
-  update(T): number;
-}
