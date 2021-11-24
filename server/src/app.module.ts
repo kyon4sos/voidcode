@@ -1,7 +1,5 @@
 import { Application } from './application/application.model';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './user/user.model';
@@ -30,9 +28,7 @@ import { FormModule } from './form/form.module';
     ApplicationModule,
     FormModule,
   ],
-  controllers: [AppController],
   providers: [
-    AppService,
     {
       provide: APP_FILTER,
       useClass: GlobalExceptionFilter,
