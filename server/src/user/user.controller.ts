@@ -2,7 +2,9 @@ import { Request } from 'express';
 import { BaseController } from './../base/index';
 import { Controller, Get, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @Controller('user')
 export class UserController extends BaseController {
   constructor() {
