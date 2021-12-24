@@ -16,9 +16,6 @@ export class GlobalExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception.getStatus();
-    console.log(exception);
-    if (exception instanceof IntersectionObserver) {
-    }
     if (exception instanceof BadRequestException) {
       const badreq = (exception as BadRequestException).getResponse();
       response.status(status).json({

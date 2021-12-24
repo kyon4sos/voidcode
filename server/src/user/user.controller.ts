@@ -1,19 +1,20 @@
+import { UserService } from './user.service';
 import { Request } from 'express';
 import { BaseController } from './../base/index';
-import { Controller, Get, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, Inject, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth } from '@nestjs/swagger';
 
 @ApiBearerAuth()
 @Controller('user')
 export class UserController extends BaseController {
-  constructor() {
+  constructor(private readonly userService: UserService) {
     super();
   }
   @UseGuards(AuthGuard('jwt'))
   @Get()
-  async index(@Req() req: Request) {
-    const user = this.getCurrentUser(req);
-    return this.ok({ user, name: 'user' });
+  async index() {
+    const res = await this.userService.findAll();
+    return this.ok(res);
   }
 }

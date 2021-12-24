@@ -1,11 +1,12 @@
-import { Application } from './application/application.model';
-import { Module } from '@nestjs/common';
-import { UserModule } from './user/user.module';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { APP_FILTER } from '@nestjs/core';
+import { DnsMiddleware } from './dns.middleware';
+import { Application } from './application/application.model';
+import { UserModule } from './user/user.module';
 import { User } from './user/user.model';
 import { AuthModule, passportModule } from './auth/auth.module';
 import { GlobalExceptionFilter } from './exception/global.excepition';
-import { APP_FILTER } from '@nestjs/core';
 import { ApplicationModule } from './application/application.module';
 import { FormModule } from './form/form.module';
 
